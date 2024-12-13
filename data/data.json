@@ -1,0 +1,205 @@
+{
+    "subcounty": "Kisumu",
+    "constituencies": [
+      {
+        "name": "Kisumu Central",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Xaverian Primary School",
+              "students_population": 800,
+              "size_in_square_meters": 5000
+            },
+            {
+              "name": "Joel Omino Primary School",
+              "students_population": 750,
+              "size_in_square_meters": 4500
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Kisumu Boys High School",
+              "students_population": 1200,
+              "size_in_square_meters": 15000
+            },
+            {
+              "name": "Kisumu Girls High School",
+              "students_population": 1300,
+              "size_in_square_meters": 14000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Jaramogi Oginga Odinga Teaching and Referral Hospital",
+              "type": "Public",
+              "capacity": 500,
+              "annual_patients": 20000
+            }
+          ]
+        }
+      },
+      {
+        "name": "Kisumu East",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Migosi Primary School",
+              "students_population": 650,
+              "size_in_square_meters": 4000
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Nyamasaria Secondary School",
+              "students_population": 800,
+              "size_in_square_meters": 7000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Nyamasaria Health Centre",
+              "type": "Public",
+              "capacity": 100,
+              "annual_patients": 3000
+            }
+          ]
+        }
+      },
+      {
+        "name": "Kisumu West",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Ojola Primary School",
+              "students_population": 500,
+              "size_in_square_meters": 3500
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Otonglo Secondary School",
+              "students_population": 600,
+              "size_in_square_meters": 8000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Ojola Subcounty Hospital",
+              "type": "Public",
+              "capacity": 150,
+              "annual_patients": 5000
+            }
+          ]
+        }
+      },
+      {
+        "name": "Nyando",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Ahero Primary School",
+              "students_population": 700,
+              "size_in_square_meters": 5000
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Ahero Secondary School",
+              "students_population": 750,
+              "size_in_square_meters": 9000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Ahero Subcounty Hospital",
+              "type": "Public",
+              "capacity": 200,
+              "annual_patients": 7000
+            }
+          ]
+        }
+      },
+      {
+        "name": "Muhoroni",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Muhoroni Primary School",
+              "students_population": 400,
+              "size_in_square_meters": 3000
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Muhoroni Secondary School",
+              "students_population": 550,
+              "size_in_square_meters": 6000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Muhoroni Subcounty Hospital",
+              "type": "Public",
+              "capacity": 100,
+              "annual_patients": 4000
+            }
+          ]
+        }
+      },
+      {
+        "name": "Nyakach",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Pap Onditi Primary School",
+              "students_population": 300,
+              "size_in_square_meters": 2500
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Nyabondo Secondary School",
+              "students_population": 700,
+              "size_in_square_meters": 8000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Pap Onditi Subcounty Hospital",
+              "type": "Public",
+              "capacity": 120,
+              "annual_patients": 4500
+            }
+          ]
+        }
+      },
+      {
+        "name": "Seme",
+        "amenities": {
+          "primary_schools": [
+            {
+              "name": "Holo Primary School",
+              "students_population": 600,
+              "size_in_square_meters": 4000
+            }
+          ],
+          "secondary_schools": [
+            {
+              "name": "Seme Secondary School",
+              "students_population": 650,
+              "size_in_square_meters": 7000
+            }
+          ],
+          "hospitals": [
+            {
+              "name": "Holo Health Centre",
+              "type": "Public",
+              "capacity": 100,
+              "annual_patients": 3500
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
