@@ -22,6 +22,5 @@ func renderTemplate(w http.ResponseWriter, templateName string, data interface{}
 
 // Template loader
 var templates = template.Must(template.New("").ParseFiles(
-
 	"templates/index.html",
 ))
