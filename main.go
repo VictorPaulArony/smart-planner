@@ -1,48 +1,53 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	mapping "smart-planner/mapping"
-
-	"smart-planner/handlers"
 )
 
 // function main of the smart planners system
 func main() {
 	// The output of the map data.
-	osmFile := "kisumu-data.xml"
-	osm, err := mapping.ParseOSMFile(osmFile)
+	filename := "kisumu-data.xml"
+	osmData, err := mapping.ParseOSMFile(filename)
 	if err != nil {
-		fmt.Println("Error parsing OSM file:", err)
+		log.Println("Error parsing osm file", err)
 		return
 	}
-	// "This is the raw data"
-	fmt.Println("This is my osm data\n", "<<<", osm)
 
-	// Print the ralation details
-	for _, relation := range osm.Relations {
-		fmt.Printf("Relation ID: %d, Visible: %v, Version: %d, User: %s\n",
-			relation.ID, relation.Visible, relation.Version, relation.User)
-		fmt.Println("Members:")
-		for _, member := range relation.Members {
-			fmt.Printf(" - Type: %s, Ref: %d, Role: %s\n", member.Type, member.Ref, member.Role)
-		}
-		for _, tag := range relation.Tags {
-			fmt.Printf(" - %s = %s\n", tag.Key, tag.Value)
-		}
+	// Convert to GeoJSON
+	geoJSON := mapping.ConvertOSMToGeoJSON(osmData)
+
+	// Save GeoJSON to file
+	file, err := os.Create("kisumu-data.geojson")
+	if err != nil {
+		fmt.Println("Error creating GeoJSON file:", err)
+		return
+	}
+	defer file.Close()
+
+	encoder := json.NewEncoder(file)
+	encoder.SetIndent("", "  ")
+	err = encoder.Encode(geoJSON)
+	if err != nil {
+		fmt.Println("Error writing GeoJSON file:", err)
+		return
 	}
 
-	// functionality to handle the static files
-	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/static", http.StripPrefix("/static/", fs))
+	fmt.Println("GeoJSON data saved to kisumu-data.geojson")
 
-	// main page handler functions
-	http.HandleFunc("/", handlers.IndexHandler)
+	// Serve static files (HTML, CSS, JS, GeoJSON)
+	http.Handle("/map", http.FileServer(http.Dir("./static")))
 
-	// localhost for the system testing
-	log.Println("http://localhost:1234")
-	http.ListenAndServe(":1234", nil)
+	// Start the server
+	port := ":8080"
+	fmt.Printf("Server running at http://localhost%s\n", port)
+	if err := http.ListenAndServe(port, nil); err != nil {
+		fmt.Println("Error starting server:", err)
+	}
 }
