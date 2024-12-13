@@ -1,0 +1,71 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.0.1 (1652998 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<relation id="16193530" visible="true" version="18" changeset="143438972" timestamp="2023-10-31T19:18:01Z" user="mappOG" uid="12114869">
+<member type="way" ref="1197494410" role="outer"/>
+<member type="way" ref="1193913675" role="outer"/>
+<member type="way" ref="1178763337" role="outer"/>
+<member type="way" ref="1198088584" role="outer"/>
+<member type="way" ref="1178763336" role="outer"/>
+<member type="way" ref="1198088586" role="outer"/>
+<member type="way" ref="1197494399" role="outer"/>
+<member type="way" ref="259741921" role="outer"/>
+<member type="way" ref="1197494401" role="outer"/>
+<member type="way" ref="1184669056" role="outer"/>
+<member type="way" ref="1197494403" role="outer"/>
+<member type="way" ref="1178407365" role="outer"/>
+<member type="way" ref="1197494405" role="outer"/>
+<member type="way" ref="1193488515" role="outer"/>
+<member type="way" ref="1193488514" role="outer"/>
+<member type="way" ref="1178407366" role="outer"/>
+<member type="way" ref="1216760722" role="outer"/>
+<member type="way" ref="1193488516" role="outer"/>
+<member type="way" ref="1178750297" role="outer"/>
+<member type="way" ref="1193488513" role="outer"/>
+<member type="way" ref="1178751929" role="outer"/>
+<member type="way" ref="1179586203" role="outer"/>
+<member type="way" ref="1178379578" role="outer"/>
+<member type="way" ref="1212730202" role="outer"/>
+<member type="way" ref="1178379574" role="outer"/>
+<member type="way" ref="1178379571" role="outer"/>
+<member type="way" ref="1197494407" role="outer"/>
+<member type="way" ref="1178751930" role="outer"/>
+<member type="way" ref="1178730737" role="outer"/>
+<member type="way" ref="1178730738" role="outer"/>
+<member type="way" ref="1178379600" role="outer"/>
+<member type="way" ref="1178764421" role="outer"/>
+<member type="way" ref="1197494394" role="outer"/>
+<member type="way" ref="1197494396" role="outer"/>
+<member type="way" ref="1193913674" role="outer"/>
+<member type="way" ref="1193913676" role="outer"/>
+<member type="way" ref="1178379594" role="outer"/>
+<member type="way" ref="1178765318" role="outer"/>
+<member type="way" ref="1193914659" role="outer"/>
+<member type="way" ref="1193913677" role="outer"/>
+<member type="way" ref="1178379595" role="outer"/>
+<member type="node" ref="11139934547" role="admin_centre"/>
+<tag k="name" v="Kisumu"/>
+<tag k="name:am" v="ኪሱሙ"/>
+<tag k="name:ar" v="كيسومو"/>
+<tag k="name:azb" v="کیسومو"/>
+<tag k="name:be" v="Кісуму"/>
+<tag k="name:de" v="Kisumu"/>
+<tag k="name:es" v="Kisumu"/>
+<tag k="name:fr" v="Kisumu"/>
+<tag k="name:grc" v="Κισούμου"/>
+<tag k="name:gu" v="કિસુમુ"/>
+<tag k="name:hi" v="किसुमु"/>
+<tag k="name:ja" v="キスム"/>
+<tag k="name:ko" v="키 수무"/>
+<tag k="name:or" v="କିସୁମୁ"/>
+<tag k="name:pa" v="ਕਿਸਮੂ"/>
+<tag k="name:ru" v="Кисуму"/>
+<tag k="name:sr" v="Кисуму"/>
+<tag k="name:uk" v="Кісуму"/>
+<tag k="name:ur" v="کسیمو"/>
+<tag k="name:zh" v="基苏木"/>
+<tag k="place" v="city"/>
+<tag k="population" v="1155574"/>
+<tag k="population:date" v="2019"/>
+<tag k="type" v="multipolygon"/>
+<tag k="website" v="https://city.kisumu.go.ke/"/>
+</relation>
+</osm>
