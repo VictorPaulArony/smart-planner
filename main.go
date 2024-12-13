@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
 
 	"smart-planner/handlers"
 )
@@ -16,11 +15,11 @@ func main() {
 
 	// main page handler functions
 	http.HandleFunc("/", handlers.IndexHandler)
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "3000" // Default fallback for local testing
-	}
+	// port := os.Getenv("PORT")
+	// if port == "" {
+	// 	port = "3000" // Default fallback for local testing
+	// }
 	// localhost for the system testing
 	log.Println("http://localhost:3000")
-	http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe(":3000", nil)
 }
