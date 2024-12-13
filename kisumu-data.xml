@@ -1,71 +1,530 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.0.1 (1652998 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<relation id="16193530" visible="true" version="18" changeset="143438972" timestamp="2023-10-31T19:18:01Z" user="mappOG" uid="12114869">
-<member type="way" ref="1197494410" role="outer"/>
-<member type="way" ref="1193913675" role="outer"/>
-<member type="way" ref="1178763337" role="outer"/>
-<member type="way" ref="1198088584" role="outer"/>
-<member type="way" ref="1178763336" role="outer"/>
-<member type="way" ref="1198088586" role="outer"/>
-<member type="way" ref="1197494399" role="outer"/>
-<member type="way" ref="259741921" role="outer"/>
-<member type="way" ref="1197494401" role="outer"/>
-<member type="way" ref="1184669056" role="outer"/>
-<member type="way" ref="1197494403" role="outer"/>
-<member type="way" ref="1178407365" role="outer"/>
-<member type="way" ref="1197494405" role="outer"/>
-<member type="way" ref="1193488515" role="outer"/>
-<member type="way" ref="1193488514" role="outer"/>
-<member type="way" ref="1178407366" role="outer"/>
-<member type="way" ref="1216760722" role="outer"/>
-<member type="way" ref="1193488516" role="outer"/>
-<member type="way" ref="1178750297" role="outer"/>
-<member type="way" ref="1193488513" role="outer"/>
-<member type="way" ref="1178751929" role="outer"/>
-<member type="way" ref="1179586203" role="outer"/>
-<member type="way" ref="1178379578" role="outer"/>
-<member type="way" ref="1212730202" role="outer"/>
-<member type="way" ref="1178379574" role="outer"/>
-<member type="way" ref="1178379571" role="outer"/>
-<member type="way" ref="1197494407" role="outer"/>
-<member type="way" ref="1178751930" role="outer"/>
-<member type="way" ref="1178730737" role="outer"/>
-<member type="way" ref="1178730738" role="outer"/>
-<member type="way" ref="1178379600" role="outer"/>
-<member type="way" ref="1178764421" role="outer"/>
-<member type="way" ref="1197494394" role="outer"/>
-<member type="way" ref="1197494396" role="outer"/>
-<member type="way" ref="1193913674" role="outer"/>
-<member type="way" ref="1193913676" role="outer"/>
-<member type="way" ref="1178379594" role="outer"/>
-<member type="way" ref="1178765318" role="outer"/>
-<member type="way" ref="1193914659" role="outer"/>
-<member type="way" ref="1193913677" role="outer"/>
-<member type="way" ref="1178379595" role="outer"/>
-<member type="node" ref="11139934547" role="admin_centre"/>
-<tag k="name" v="Kisumu"/>
-<tag k="name:am" v="ኪሱሙ"/>
-<tag k="name:ar" v="كيسومو"/>
-<tag k="name:azb" v="کیسومو"/>
-<tag k="name:be" v="Кісуму"/>
-<tag k="name:de" v="Kisumu"/>
-<tag k="name:es" v="Kisumu"/>
-<tag k="name:fr" v="Kisumu"/>
-<tag k="name:grc" v="Κισούμου"/>
-<tag k="name:gu" v="કિસુમુ"/>
-<tag k="name:hi" v="किसुमु"/>
-<tag k="name:ja" v="キスム"/>
-<tag k="name:ko" v="키 수무"/>
-<tag k="name:or" v="କିସୁମୁ"/>
-<tag k="name:pa" v="ਕਿਸਮੂ"/>
-<tag k="name:ru" v="Кисуму"/>
-<tag k="name:sr" v="Кисуму"/>
-<tag k="name:uk" v="Кісуму"/>
-<tag k="name:ur" v="کسیمو"/>
-<tag k="name:zh" v="基苏木"/>
-<tag k="place" v="city"/>
-<tag k="population" v="1155574"/>
-<tag k="population:date" v="2019"/>
-<tag k="type" v="multipolygon"/>
-<tag k="website" v="https://city.kisumu.go.ke/"/>
-</relation>
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.62.4 2390de5a">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2024-12-13T21:53:54Z"/>
+
+  <node id="6851448211" lat="-0.1021149" lon="34.7523519">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="ICS collage"/>
+  </node>
+  <node id="7232539078" lat="-0.0989898" lon="34.7706084">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Neverland school"/>
+  </node>
+  <node id="8190812612" lat="-0.0969162" lon="34.7647115">
+    <tag k="amenity" v="hospital"/>
+    <tag k="condition" v="unknown"/>
+    <tag k="name" v="Star Hospital"/>
+    <tag k="operational_status" v="operational"/>
+    <tag k="operational_status:availability" v="always"/>
+    <tag k="operator:description" v="private"/>
+    <tag k="operator:type" v="private"/>
+  </node>
+  <node id="8190955390" lat="-0.0762983" lon="34.7240517">
+    <tag k="amenity" v="hospital"/>
+    <tag k="condition" v="unknown"/>
+    <tag k="name" v="St Jairus"/>
+    <tag k="operational_status" v="operational"/>
+    <tag k="operational_status:availability" v="always"/>
+    <tag k="operator:description" v="St Jairus"/>
+    <tag k="operator:type" v="religious"/>
+  </node>
+  <node id="8190978362" lat="-0.0624000" lon="34.7085567">
+    <tag k="addr:city" v="Bondeni"/>
+    <tag k="amenity" v="hospital"/>
+    <tag k="name" v="Kodiaga Sub-County Hospital"/>
+    <tag k="operational_status" v="operational"/>
+    <tag k="operational_status:availability" v="always"/>
+    <tag k="operator:description" v="county_government"/>
+    <tag k="operator:type" v="county_government"/>
+  </node>
+  <node id="8190988798" lat="-0.0841326" lon="34.7896853">
+    <tag k="amenity" v="hospital"/>
+    <tag k="condition" v="unknown"/>
+    <tag k="name" v="Star Hospital Kisumu Annex"/>
+    <tag k="operational_status" v="operational"/>
+    <tag k="operational_status:availability" v="always"/>
+    <tag k="operator:description" v="private"/>
+    <tag k="operator:type" v="private"/>
+  </node>
+  <node id="8817450817" lat="-0.0812275" lon="34.7080731">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Lower Kotetni Primary School"/>
+  </node>
+  <node id="8817479617" lat="-0.0659133" lon="34.7097044">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Kodiaga Prison Primary School"/>
+  </node>
+  <node id="8817487717" lat="-0.0769803" lon="34.7089820">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Crayton Junior School"/>
+  </node>
+  <node id="8817517817" lat="-0.0751334" lon="34.7285204">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Westmont School"/>
+  </node>
+  <node id="8817530117" lat="-0.0757317" lon="34.7320317">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="BrainHouse School"/>
+  </node>
+  <node id="8817530118" lat="-0.0759807" lon="34.7396296">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Hope Day Centre"/>
+  </node>
+  <node id="8817536517" lat="-0.0741683" lon="34.7346600">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Hill-View Learning Centre"/>
+  </node>
+  <node id="8817572917" lat="-0.0771870" lon="34.7417513">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Pundo Primary School"/>
+  </node>
+  <node id="8817579717" lat="-0.0807696" lon="34.7404147">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="St Pius Preparatory School"/>
+  </node>
+  <node id="8817596718" lat="-0.0778750" lon="34.7650350">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Akili Academy"/>
+  </node>
+  <node id="8817621217" lat="-0.0741963" lon="34.7624522">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="secondary"/>
+    <tag k="name" v="Kudho Secondary School"/>
+  </node>
+  <node id="8817649917" lat="-0.0772551" lon="34.7651940">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Flames of Hope Academy"/>
+  </node>
+  <node id="8900279417" lat="-0.0814583" lon="34.7642067">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Mary Royal School"/>
+  </node>
+  <node id="8900279418" lat="-0.0809700" lon="34.7650400">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Obunga ECDE"/>
+  </node>
+  <node id="8900279419" lat="-0.0811754" lon="34.7657452">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Canaan ECDE"/>
+  </node>
+  <node id="8900290517" lat="-0.0812628" lon="34.7655812">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Kamakowa SDA ECDE"/>
+  </node>
+  <node id="8900290518" lat="-0.0796774" lon="34.7674453">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Emmaus Blessed Primary School"/>
+  </node>
+  <node id="8900293817" lat="-0.0806433" lon="34.7656217">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Arcades Educational Centre"/>
+  </node>
+  <node id="8900294918" lat="-0.0802234" lon="34.7681076">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Shephards Hill Baptist School"/>
+  </node>
+  <node id="8900300718" lat="-0.0783967" lon="34.7693417">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Bridge international Academy"/>
+  </node>
+  <node id="8900300719" lat="-0.0787289" lon="34.7693971">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Future Hope school"/>
+  </node>
+  <node id="8900300720" lat="-0.0716233" lon="34.7879633">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Pitapata Little Academy"/>
+  </node>
+  <node id="8900304517" lat="-0.0802396" lon="34.7680814">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="day_care"/>
+    <tag k="name" v="Shephards Hill Baptist School Day Care"/>
+  </node>
+  <node id="8900310917" lat="-0.0765217" lon="34.7714250">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Hajushine"/>
+  </node>
+  <node id="8900313017" lat="-0.0812747" lon="34.7715699">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="St. Martha School"/>
+  </node>
+  <node id="8900326618" lat="-0.0780133" lon="34.7854100">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="GRAPHELI JUNIOR"/>
+  </node>
+  <node id="8900333818" lat="-0.0821191" lon="34.7847992">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="day_care"/>
+    <tag k="name" v="Jomsi Day Care"/>
+  </node>
+  <node id="8900334018" lat="-0.0822638" lon="34.7824029">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Wisdom Bells Academy"/>
+    <tag k="operator:description" v="Kisumu Baptism Church"/>
+    <tag k="operator:type" v="religious"/>
+  </node>
+  <node id="8900334019" lat="-0.0844338" lon="34.7897651">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Urzuri Suburbs Academy"/>
+  </node>
+  <node id="8900339817" lat="-0.0782133" lon="34.7861200">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Kisumu Rehema Primary School"/>
+  </node>
+  <node id="8900362618" lat="-0.0874895" lon="34.7870711">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Simon Newberry"/>
+  </node>
+  <node id="8900362619" lat="-0.0859850" lon="34.7845033">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Wonderland Premier Academy"/>
+    <tag k="operator:description" v="PCEA"/>
+    <tag k="operator:type" v="religious"/>
+  </node>
+  <node id="8900362620" lat="-0.0876333" lon="34.7830600">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Willsha Academy"/>
+  </node>
+  <node id="8900366117" lat="-0.0843518" lon="34.7868604">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Living Stream Nursery and Primary"/>
+  </node>
+  <node id="8900366118" lat="-0.0893757" lon="34.7843889">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Atlantic Junior school"/>
+  </node>
+  <node id="8900380217" lat="-0.0857217" lon="34.7818615">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="St.lukes ACK manyatta ECDE&amp; PRIMARY"/>
+    <tag k="operator:description" v="St. Luke ACK Manyatta"/>
+    <tag k="operator:type" v="religious"/>
+  </node>
+  <node id="8900380218" lat="-0.0875767" lon="34.7816633">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="The Delphins Academy"/>
+  </node>
+  <node id="8900386517" lat="-0.0885132" lon="34.7856073">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Goshen Light Preparatory School"/>
+  </node>
+  <node id="8900386717" lat="-0.0885423" lon="34.7855107">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Goshen Light"/>
+  </node>
+  <node id="8900412517" lat="-0.0908644" lon="34.7855846">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Carines Junior School"/>
+  </node>
+  <node id="8900416817" lat="-0.0898150" lon="34.7826217">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Kisumu Elite Academy"/>
+  </node>
+  <node id="8900416818" lat="-0.0919500" lon="34.7818250">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="All-Star Nursery School"/>
+  </node>
+  <node id="8900420217" lat="-0.0908033" lon="34.7815117">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="ACK Manyatta Primary School"/>
+  </node>
+  <node id="8900420218" lat="-0.0933617" lon="34.7789583">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Brainy Stars Junior School"/>
+  </node>
+  <node id="8900420219" lat="-0.0920500" lon="34.7767233">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Wema Academy Nursery"/>
+  </node>
+  <node id="8900420220" lat="-0.0955433" lon="34.7833867">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Little Angel Academy"/>
+  </node>
+  <node id="8900427518" lat="-0.0915117" lon="34.7775400">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Genesis Nursery School"/>
+  </node>
+  <node id="8900442018" lat="-0.1024700" lon="34.7793633">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Baby Star Junior"/>
+  </node>
+  <node id="8900442019" lat="-0.0941800" lon="34.7731883">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="AIC Church"/>
+    <tag k="name" v="AIC Arina Nursery and Primary"/>
+    <tag k="operator:description" v="Arina Community"/>
+    <tag k="operator:type" v="community"/>
+  </node>
+  <node id="8900445918" lat="-0.0955683" lon="34.7808600">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="St. Cleophas Shalom Academy"/>
+  </node>
+  <node id="8900445920" lat="-0.0933881" lon="34.7874515">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Genesis Introductory School"/>
+  </node>
+  <node id="8900445921" lat="-0.0957387" lon="34.7871918">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Gracious Joy Academy"/>
+  </node>
+  <node id="8900447618" lat="-0.0916716" lon="34.7947828">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="ACK Diocese of Maseno South"/>
+    <tag k="name" v="Mbeme Primary School"/>
+  </node>
+  <node id="8900447620" lat="-0.0920723" lon="34.7935701">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Center Of Hope"/>
+  </node>
+  <node id="8900456417" lat="-0.0962350" lon="34.7818617">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="One Vibe Africa"/>
+    <tag k="name" v="Young Generation Center"/>
+  </node>
+  <node id="8900465717" lat="-0.0965601" lon="34.7866811">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Havilah Crystal School"/>
+  </node>
+  <node id="8900467217" lat="-0.0973254" lon="34.7889984">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Judea Primary School"/>
+  </node>
+  <node id="8900467219" lat="-0.1007867" lon="34.7788800">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="St. Penina Premium Nursery School"/>
+  </node>
+  <node id="8900472317" lat="-0.1025317" lon="34.7832717">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Children of Light Learning Centre"/>
+  </node>
+  <node id="8900475717" lat="-0.1024400" lon="34.7793967">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="St Olive Daycare and Nursery"/>
+  </node>
+  <node id="8900476617" lat="-0.1035483" lon="34.7783783">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Hopping Centre"/>
+    <tag k="operator:description" v="Blessed Overcomes CBO"/>
+    <tag k="operator:type" v="cbo"/>
+  </node>
+  <node id="8900479917" lat="-0.1033183" lon="34.7769100">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="St. Williams"/>
+  </node>
+  <node id="8900485017" lat="-0.0894725" lon="34.7659670">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="The Sapphire School"/>
+  </node>
+  <node id="8900494818" lat="-0.0916096" lon="34.7638208">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Kisumu Junior Academy"/>
+  </node>
+  <node id="8900503224" lat="-0.0967000" lon="34.7639333">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Jeflox Pre-Primary &amp; Daycare Centre"/>
+  </node>
+  <node id="8900519717" lat="-0.0930114" lon="34.7618230">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Elimu Deark School"/>
+  </node>
+  <node id="8900550488" lat="-0.0959817" lon="34.7703283">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Kisumu County Government"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Shaurimoyo ECDE Centre"/>
+  </node>
+  <node id="8900568040" lat="-0.0969353" lon="34.7681136">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="secondary"/>
+    <tag k="name" v="Kaloleni Adult Basics and Secondary Education Centre"/>
+  </node>
+  <node id="8900577321" lat="-0.0986865" lon="34.7669321">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="County Government Of Kisumu"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Kaloleni Muslim Primary School"/>
+  </node>
+  <node id="8900589619" lat="-0.0997300" lon="34.7651500">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="GOK"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Mathew Ondiek Primary School"/>
+    <tag k="operator:type" v="government"/>
+  </node>
+  <node id="8903728217" lat="-0.1061483" lon="34.7800167">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Bright Kid ECDE Centre"/>
+  </node>
+  <node id="8903734717" lat="-0.1083750" lon="34.7800533">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="ST. Brigits"/>
+  </node>
+  <node id="8903741217" lat="-0.1098733" lon="34.7811800">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Wandiege Primary"/>
+  </node>
+  <node id="8903741220" lat="-0.1169200" lon="34.7817700">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Kisumu East CDF/ County Government of Kisumu"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Dago Primary School"/>
+  </node>
+  <node id="8903749717" lat="-0.1098967" lon="34.7832417">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Galway Joyous Academy"/>
+  </node>
+  <node id="8903751417" lat="-0.1108017" lon="34.7807200">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Blessed Hope Christian Academy"/>
+  </node>
+  <node id="8903751418" lat="-0.1125433" lon="34.7854550">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Lifespring Nursery and Primary School"/>
+  </node>
+  <node id="8903766117" lat="-0.1141500" lon="34.7813450">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Pentecostal church"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Chrisfa Junior school and day care"/>
+  </node>
+  <node id="8903766118" lat="-0.1147917" lon="34.7771083">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="County Government of Kisumu"/>
+    <tag k="name" v="Senior Chief Onunga Special School"/>
+  </node>
+  <node id="8903792717" lat="-0.1161300" lon="34.7742900">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="secondary"/>
+    <tag k="name" v="St. Joseph Kisumu Secondary School"/>
+  </node>
+  <node id="8903792718" lat="-0.1195750" lon="34.7640050">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Super Ideal Junior school"/>
+    <tag k="operator:type" v="private"/>
+  </node>
+  <node id="8903841718" lat="-0.1187283" lon="34.7621900">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Beliok Junior School"/>
+    <tag k="operator:type" v="private"/>
+  </node>
+  <node id="8903855717" lat="-0.1198166" lon="34.7597503">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Monica girls empowerment centre"/>
+    <tag k="name" v="Monica Girls Empowerment Center"/>
+  </node>
+  <node id="8903861517" lat="-0.1176576" lon="34.7569879">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Government of Kenya"/>
+    <tag k="education:type" v="primary"/>
+    <tag k="name" v="Pandpieri Primary School"/>
+  </node>
+  <node id="8903871018" lat="-0.1252038" lon="34.7542523">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Belle mont"/>
+    <tag k="name" v="Belle mont"/>
+  </node>
+  <node id="8903871019" lat="-0.1253142" lon="34.7545389">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Belle mont"/>
+    <tag k="name" v="Belle Mont Academy"/>
+  </node>
+  <node id="8903878117" lat="-0.1238467" lon="34.7511667">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Kisumu South Adventist Pre-Primary"/>
+    <tag k="operator:description" v="Kisumu South SDA"/>
+  </node>
+  <node id="8903887617" lat="-0.1255737" lon="34.7529193">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Baraka church"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="St Elena ECDE"/>
+    <tag k="operator:description" v="Baraka"/>
+  </node>
+  <node id="8903889117" lat="-0.1257111" lon="34.7530124">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Worship center ministry"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Ripe excelle t ECDE"/>
+    <tag k="operator:description" v="Worship Center Ministries"/>
+    <tag k="operator:type" v="religious"/>
+  </node>
+  <node id="8903896717" lat="-0.1287931" lon="34.7474933">
+    <tag k="amenity" v="school"/>
+    <tag k="education:type" v="pre_primary"/>
+    <tag k="name" v="Gifted Hands School ECDE Centre"/>
+    <tag k="operator:type" v="individual"/>
+  </node>
+  <node id="8903896718" lat="-0.1282050" lon="34.7441283">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="ZAKI BEGINNER'S"/>
+  </node>
+  <node id="8903896719" lat="-0.1336533" lon="34.7437600">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Victory Family"/>
+    <tag k="operator:description" v="Victory Family"/>
+  </node>
+  <node id="8903909617" lat="-0.1406017" lon="34.7359433">
+    <tag k="amenity" v="school"/>
+    <tag k="education:supported_by" v="Government of Kenya"/>
+    <tag k="name" v="Danga Primary School"/>
+  </node>
+  <node id="8903925417" lat="-0.0859307" lon="34.7792871">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Rainbow School"/>
+  </node>
+  <node id="8903926617" lat="-0.0866174" lon="34.7782093">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Brightons Becca Community Learning"/>
+  </node>
+  <node id="9587597954" lat="-0.0920628" lon="34.7639507">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Kisumu Senior Academy"/>
+  </node>
+  <node id="9587605887" lat="-0.0449871" lon="34.7709567">
+    <tag k="amenity" v="hospital"/>
+    <tag k="healthcare" v="hospital"/>
+    <tag k="name" v="St. Monica Hospital"/>
+  </node>
+  <node id="10579036144" lat="-0.0828909" lon="34.7747945">
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Trinity Centre Computer Training"/>
+  </node>
+  <node id="10941825182" lat="-0.1008349" lon="34.7526192">
+    <tag k="amenity" v="hospital"/>
+    <tag k="healthcare" v="hospital"/>
+    <tag k="name" v="Guru Nanak Hospital"/>
+  </node>
+  <node id="11036196419" lat="-0.0866344" lon="34.7682075">
+    <tag k="amenity" v="hospital"/>
+    <tag k="name" v="Marie Stopes Hospital"/>
+  </node>
+  <node id="11119145706" lat="-0.0874105" lon="34.7689685">
+    <tag k="amenity" v="hospital"/>
+    <tag k="name" v="Fairmont hosptial"/>
+  </node>
+  <node id="11119145707" lat="-0.0874319" lon="34.7694352">
+    <tag k="amenity" v="hospital"/>
+    <tag k="name" v="Kanikka hospital"/>
+  </node>
+
 </osm>
