@@ -11,8 +11,8 @@ import (
 // function main of the smart planners system
 func main() {
 	// functionality to handle the static files
-	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/static/", http.StripPrefix("/static", fs))
+	// fs := http.FileServer(http.Dir("static"))
+	// http.Handle("/static/", http.StripPrefix("/static", fs))
 
 	// main page handler functions
 	http.HandleFunc("/", handlers.IndexHandler)
