@@ -40,27 +40,18 @@ This Smart Cities Location Insights Platform is a comprehensive tool designed to
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/smart-cities-insights.git
-   cd smart-cities-insights
+   git clone https://github.com/VictorPaulArony/smart-planner.git
+   cd smart-planner
    ```
 
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 ## Usage
 
-Run the application:
-```bash
-streamlit run app.py
-```
+2. Run the website in the CLI for localhost:
+   ```bash
+   go run main.go
+   ```
+``
 
 ### User Interface Workflow
 1. Select County from dropdown
@@ -99,9 +90,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Project Maintainer: [Your Name]
-- Email: your.email@example.com
-- Project Link: [https://github.com/yourusername/smart-cities-insights](https://github.com/yourusername/smart-cities-insights)
+Project Maintainer: [Victor Paul Arony]
+- Email: victorpaularony@gmail.com
+- Project Link: [https://github.com/VictorPaulArony/smart-planner.git](https://github.com/VictorPaulArony/smart-planner.git)
 
 ## Acknowledgements
 
