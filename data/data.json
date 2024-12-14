@@ -1,0 +1,167 @@
+{
+  "counties": [
+    {
+      "id": "042",
+      "name": "Kisumu",
+      "subcounties": [
+        {
+          "id": "sub_1",
+          "name": "Kisumu Central",
+          "wards": [
+            {
+              "id": "ward_1",
+              "name": "Nyalenda A",
+              "amenities": {
+                "primary_schools": [
+                  {
+                    "name": "Xaverian Primary School",
+                    "students_population": 800,
+                    "size_in_square_meters": 5000
+                  }
+                ],
+                "hospitals": [
+                  {
+                    "name": "Jaramogi Oginga Odinga Teaching and Referral Hospital",
+                    "type": "Public",
+                    "capacity": 500,
+                    "annual_patients": 20000
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ward_2",
+              "name": "Nyalenda B",
+              "amenities": {
+                "secondary_schools": [
+                  {
+                    "name": "Kisumu Boys High School",
+                    "students_population": 1200,
+                    "size_in_square_meters": 15000
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "sub_2",
+          "name": "Kisumu East",
+          "wards": [
+            {
+              "id": "ward_1",
+              "name": "Kolwa East",
+              "amenities": {
+                "primary_schools": [
+                  {
+                    "name": "Migosi Primary School",
+                    "students_population": 650,
+                    "size_in_square_meters": 4000
+                  }
+                ],
+                "hospitals": [
+                  {
+                    "name": "Nyamasaria Health Centre",
+                    "type": "Public",
+                    "capacity": 100,
+                    "annual_patients": 3000
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "047",
+      "name": "Nairobi",
+      "subcounties": [
+        {
+          "id": "sub_1",
+          "name": "Westlands",
+          "wards": [
+            {
+              "id": "ward_1",
+              "name": "Parklands",
+              "amenities": {
+                "primary_schools": [
+                  {
+                    "name": "Parklands Primary School",
+                    "students_population": 900,
+                    "size_in_square_meters": 6000
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "sub_2",
+          "name": "Dagoretti North",
+          "wards": [
+            {
+              "id": "ward_1",
+              "name": "Kilimani",
+              "amenities": {
+                "hospitals": [
+                  {
+                    "name": "Kilimani Medical Centre",
+                    "type": "Private",
+                    "capacity": 200,
+                    "annual_patients": 10000
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "001",
+      "name": "Mombasa",
+      "subcounties": [
+        {
+          "id": "sub_1",
+          "name": "Nyali",
+          "wards": [
+            {
+              "id": "ward_1",
+              "name": "Kongowea",
+              "amenities": {
+                "primary_schools": [
+                  {
+                    "name": "Nyali Primary School",
+                    "students_population": 700,
+                    "size_in_square_meters": 4500
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "sub_2",
+          "name": "Mvita",
+          "wards": [
+            {
+              "id": "ward_1",
+              "name": "Majengo",
+              "amenities": {
+                "hospitals": [
+                  {
+                    "name": "Coast General Hospital",
+                    "type": "Public",
+                    "capacity": 400,
+                    "annual_patients": 15000
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
