@@ -9,12 +9,11 @@ import (
 )
 
 // function main of the smart planners system
-func main() {
-	// The output of the map data.
-	// osmFile := "kisumu-data.xml"
-
-	// functionality to handle the static files
+func main(){
 	http.HandleFunc("/", handlers.IndexHandler)
+	http.HandleFunc("/features", handlers.FeaturesHandler)
+	http.HandleFunc("/contact", handlers.ContactHandler)
+	http.HandleFunc("/case", handlers.CaseHandler)
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "3000" // Default fallback for local testing
