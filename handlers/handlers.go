@@ -13,6 +13,10 @@ var templates = template.Must(template.New("").ParseFiles(
 
 // Handler serves requests for Vercel
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
+		return
+	}
 	// Serve static files
 	if r.URL.Path == "/static/" || len(r.URL.Path) > len("/static/") {
 		fs := http.FileServer(http.Dir("./static"))
