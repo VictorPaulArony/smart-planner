@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Smart Cities Data Platform</title>
+    <link rel="stylesheet" href="static/contact.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Smart Planner</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features">Features</a>
+                <a href="/case">Case Studies</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <section class="case-study-hero">
+        <div class="feature-container">
+            <h1>Get in Touch</h1>
+            <p>Have questions about Smart planner We're here to help!</p>
+        </div>
+    </section>
+    <div class="contact-container">
+
+
+
+        <div class="contact-grid">
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="demo">Request Demo</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-info-card">
+                    <h2>Contact Information</h2>
+                    <div class="contact-method">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        <a href="mailto:contact@smartcity.ai">victorpaularony@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7z" />
+                        </svg>
+                        <a href="tel:+1234567890">+254 768744700</a>
+                    </div>
+
+                    <div class="office-locations">
+                        <h3>Our Offices</h3>
+                        <div class="office-card">
+                            <h4>Headquarters</h4>
+                            <p>Kisumu City </p>
+                            <p>Lake Basin Mall - zone01Kisumu</p>
+                            <p>Kenya</p>
+                        </div>
+                        <div class="office-card">
+                            <h4>Headquarters</h4>
+                            <p>Kisumu City </p>
+                            <p>Lake Basin Mall - zone01Kisumu</p>
+                            <p>Kenya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">Smart Planner</div>
+                    <p class="footer-description">Empowering cities with data-driven insights for smarter urban planning
+                        and resource allocation.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/victorpaularony" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/victorpaularony" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/case">Case Studies</a></li>
+                        <li><a href="/">Pricing</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">Documentation</a></li>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">API</a></li>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">Support</a></li>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            <a href="mailto:victorpaularony@gmail.com">contact@smartPlanner</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                            zone01Kisumu, Smart planner
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SmartPlanner. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="https://github.com/VictorPaulArony/smart-planner">Privacy Policy</a>
+                    <a href="https://github.com/VictorPaulArony/smart-planner">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+
+            console.log('Form submitted:', data);
+            alert('Thank you for your message. We will get back to you soon!');
+            event.target.reset();
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
