@@ -9,10 +9,17 @@ import (
 // Template loader
 var templates = template.Must(template.New("").ParseFiles(
 	"templates/index.html",
+	"templates/case.html",
+	"templates/contact.html",
+	"templates/features.html",
 ))
 
 // Handler serves requests for Vercel
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
+		return
+	}
 	// Serve static files
 	if r.URL.Path == "/static/" || len(r.URL.Path) > len("/static/") {
 		fs := http.FileServer(http.Dir("./static"))
@@ -30,4 +37,17 @@ func renderTemplate(w http.ResponseWriter, templateName string, data interface{}
 		log.Println("Template error:", err)
 		http.Error(w, "Template rendering error", http.StatusInternalServerError)
 	}
+}
+
+// function to handle other pages of the website
+func FeaturesHandler(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "features.html", nil)
+}
+
+func CaseHandler(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "case.html", nil)
+}
+
+func ContactHandler(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "contact.html", nil)
 }
