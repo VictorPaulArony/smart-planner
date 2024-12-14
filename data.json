@@ -5,66 +5,80 @@
         "schools": [
           {
             "coords": [-0.077875, 34.765035],
-            "title": "Akili Academy"
+            "title": "Akili Academy",
+            "density": 1560
           },
           {
             "coords": [-0.0741963, 34.7624522],
-            "title": "Kudho Secondary School"
+            "title": "Kudho Secondary School",
+            "density": 1560
           },
           {
             "coords": [-0.0772551, 34.765194],
-            "title": "Flames of Hope Academy"
+            "title": "Flames of Hope Academy",
+            "density": 1560
           },
           {
             "coords": [-0.0814583, 34.7642067],
-            "title": "Mary Royal School"
+            "title": "Mary Royal School",
+            "density": 1560
           },
           {
             "coords": [-0.08097, 34.76504],
-            "title": "Obunga ECDE"
+            "title": "Obunga ECDE",
+            "density": 1560
           },
           {
             "coords": [-0.0811754, 34.7657452],
-            "title": "Canaan ECDE"
+            "title": "Canaan ECDE",
+            "density": 1560
           },
           {
             "coords": [-0.0812628, 34.7655812],
-            "title": "Kamakowa SDA ECDE"
+            "title": "Kamakowa SDA ECDE",
+            "density": 1560
           },
           {
             "coords": [-0.0796774, 34.7674453],
-            "title": "Emmaus Blessed Primary School"
+            "title": "Emmaus Blessed Primary School",
+            "density": 1560
           },
           {
             "coords": [-0.0806433, 34.7656217],
-            "title": "Arcades Educational Centre"
+            "title": "Arcades Educational Centre",
+            "density": 1560
           },
           {
             "coords": [-0.0802234, 34.7681076],
-            "title": "Shephards Hill Baptist School"
+            "title": "Shephards Hill Baptist School",
+            "density": 1560
           },
           {
             "coords": [-0.0783967, 34.7693417],
-            "title": "Bridge International Academy"
+            "title": "Bridge International Academy",
+            "density": 1560
           },
           {
             "coords": [-0.0787289, 34.7693971],
-            "title": "Future Hope School"
+            "title": "Future Hope School",
+            "density": 1560
           },
-
           {
             "coords": [-0.0802396, 34.7680814],
-            "title": "Shephards Hill Baptist School Day Care"
+            "title": "Shephards Hill Baptist School Day Care",
+            "density": 1560
           }
         ],
         "hospitals": [
           {
             "coords": [-0.0449871, 34.7709567],
-            "title": "St. Monica Hospital"
+            "title": "St. Monica Hospital",
+            "density": 1560
           },
           {
             "coords": [-0.0762983, 34.7240517],
-            "title": "St Jairus"
+            "title": "St Jairus",
+            "density": 1560
           }
         ]
       },
@@ -81,13 +95,15 @@
         "schools": [
           {
             "coords": [-1.239, 36.8233],
-            "title": "Karura Forest Academy"
+            "title": "Karura Forest Academy",
+            "density": 1465
           }
         ],
         "hospitals": [
           {
             "coords": [-1.24, 36.822],
-            "title": "Karura Health Clinic"
+            "title": "Karura Health Clinic",
+            "density": 1465
           }
         ]
       }
