@@ -1,14 +1,12 @@
 package main
 
 import (
-	"bytes"
-	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
 
 	"smart-planner/handlers"
+	"smart-planner/mapping"
 )
 
 const OVERPASSURL = "https://overpass-api.de/api/interpreter"
@@ -27,32 +25,22 @@ func main() {
     >;
     out skel qt;
     `
-
-	// Send request
-	resp, err := http.Post(OVERPASSURL, "text/plain", bytes.NewBufferString(query))
+	data, err := mapping.KisumuMap(OVERPASSURL, query)
 	if err != nil {
-		log.Fatalf("Error making request to Overpass API: %v", err)
+		log.Println(err)
+		return
 	}
-	defer resp.Body.Close()
+	fmt.Println(">>>> ", data)
 
-	// Read response
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatalf("Error reading response: %v", err)
-	}
+	
 
-	// Parse JSON response
-	var data interface{}
-	err = json.Unmarshal(body, &data)
-	if err != nil {
-		log.Fatalf("Error parsing JSON response: %v", err)
-	}
-
-	// Print response or process further
-	log.Printf("Overpass response: %s", body)
+	// Serve the HTML template for the map
+	http.Handle("/geojson/", http.StripPrefix("/geojson", http.FileServer(http.Dir("."))))
+	// server the HML files from the templates folder
+	http.Handle("/kisumu", http.FileServer(http.Dir("templates")))
 
 	// This handler serves the data from kisumu.
-	http.HandleFunc("/map/kisumu-map", handlers.RegionHandler)
+	http.HandleFunc("/kisumu-map", handlers.RegionHandler)
 
 	// Start the server
 	port := ":8080"
