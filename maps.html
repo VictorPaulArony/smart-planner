@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map with Dynamic Filters</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        #map { width: 100%; height: 500px; }
+        .filters-section { padding: 20px; }
+        .filters-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+        .filter-group { margin-bottom: 10px; }
+        .search-button { padding: 10px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        .search-button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <section class="filters-section">
+        <h2>Explore Resources</h2>
+        <div class="filters-grid">
+            <div class="filter-group">
+                <label for="county-search">Select County</label>
+                <select id="county-search">
+                    <option value="">Select a county...</option>
+                    <option value="kisumu">Kisumu County</option>
+                    <option value="nairobi">Nairobi County</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="subcounty-search">Select Sub-County</label>
+                <select id="subcounty-search" disabled>
+                    <option value="">Select a sub-county...</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="ward-search">Select Ward</label>
+                <select id="ward-search" disabled>
+                    <option value="">Select a ward...</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="resource-search">Select Resource</label>
+                <select id="resource-search" disabled>
+                    <option value="">Select a resource...</option>
+                    <option value="schools">Schools</option>
+                    <option value="hospitals">Hospitals</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <button class="search-button" id="search-button" disabled>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([-0.0917, 34.7630], 10); // Center on Kisumu
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Data structure holding locations
+        const data = {
+            kisumu: {
+                "kisumu east": {
+                    kanyakwar: {
+                        schools: [
+                            { coords: [-0.0920, 34.7640], title: "Kanyakwar Primary School" },
+                            { coords: [-0.0915, 34.7655], title: "Kanyakwar High School" }
+                        ],
+                        hospitals: [
+                            { coords: [-0.0930, 34.7635], title: "Kanyakwar Health Center" }
+                        ]
+                    }
+                }
+            },
+            nairobi: {
+                "westlands": {
+                    "karura": {
+                        schools: [
+                            { coords: [-1.2390, 36.8233], title: "Karura Forest Academy" }
+                        ],
+                        hospitals: [
+                            { coords: [-1.2400, 36.8220], title: "Karura Health Clinic" }
+                        ]
+                    }
+                }
+            }
+        };
+
+        // Populate sub-county dropdown based on selected county
+        const countySelect = document.getElementById("county-search");
+        const subcountySelect = document.getElementById("subcounty-search");
+        const wardSelect = document.getElementById("ward-search");
+        const resourceSelect = document.getElementById("resource-search");
+        const searchButton = document.getElementById("search-button");
+
+        countySelect.addEventListener("change", () => {
+            subcountySelect.innerHTML = '<option value="">Select a sub-county...</option>';
+            wardSelect.innerHTML = '<option value="">Select a ward...</option>';
+            resourceSelect.value = '';
+
+            if (countySelect.value) {
+                const subcounties = Object.keys(data[countySelect.value]);
+                subcounties.forEach(subcounty => {
+                    const option = document.createElement("option");
+                    option.value = subcounty;
+                    option.textContent = subcounty;
+                    subcountySelect.appendChild(option);
+                });
+                subcountySelect.disabled = false;
+            } else {
+                subcountySelect.disabled = true;
+                wardSelect.disabled = true;
+                resourceSelect.disabled = true;
+                searchButton.disabled = true;
+            }
+        });
+
+        // Populate ward dropdown based on selected sub-county
+        subcountySelect.addEventListener("change", () => {
+            wardSelect.innerHTML = '<option value="">Select a ward...</option>';
+            resourceSelect.value = '';
+
+            if (subcountySelect.value) {
+                const wards = Object.keys(data[countySelect.value][subcountySelect.value]);
+                wards.forEach(ward => {
+                    const option = document.createElement("option");
+                    option.value = ward;
+                    option.textContent = ward;
+                    wardSelect.appendChild(option);
+                });
+                wardSelect.disabled = false;
+            } else {
+                wardSelect.disabled = true;
+                resourceSelect.disabled = true;
+                searchButton.disabled = true;
+            }
+        });
+
+        // Enable resource selection and search button
+        wardSelect.addEventListener("change", () => {
+            if (wardSelect.value) {
+                resourceSelect.disabled = false;
+                searchButton.disabled = false;
+            } else {
+                resourceSelect.disabled = true;
+                searchButton.disabled = true;
+            }
+        });
+
+        // Display filtered markers on the map
+        searchButton.addEventListener("click", () => {
+            const county = countySelect.value;
+            const subcounty = subcountySelect.value;
+            const ward = wardSelect.value;
+            const resource = resourceSelect.value;
+
+            // Clear existing markers
+            map.eachLayer(layer => {
+                if (layer instanceof L.Marker || layer instanceof L.CircleMarker) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            // Add markers for the selected resource
+            if (data[county] && data[county][subcounty] && data[county][subcounty][ward] && data[county][subcounty][ward][resource]) {
+                const locations = data[county][subcounty][ward][resource];
+                locations.forEach(location => {
+                    L.marker(location.coords).addTo(map).bindPopup(`<strong>${location.title}</strong>`);
+                });
+
+                // Zoom to the first location
+                if (locations.length > 0) {
+                    map.setView(locations[0].coords, 15);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
