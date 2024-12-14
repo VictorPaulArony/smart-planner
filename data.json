@@ -1,43 +1,96 @@
 {
-    "kisumu": {
-      "kisumu east": {
-        "kanyakwar": {
-          "schools": [
-            {
-              "coords": [-0.0920, 34.7640],
-              "title": "Kanyakwar Primary School"
-            },
-            {
-              "coords": [-0.0915, 34.7655],
-              "title": "Kanyakwar High School"
-            }
-          ],
-          "hospitals": [
-            {
-              "coords": [-0.0930, 34.7635],
-              "title": "Kanyakwar Health Center"
-            }
-          ]
-        }
+  "kisumu": {
+    "kisumu east": {
+      "kanyakwar": {
+        "schools": [
+          {
+            "coords": [-0.077875, 34.765035],
+            "title": "Akili Academy"
+          },
+          {
+            "coords": [-0.0741963, 34.7624522],
+            "title": "Kudho Secondary School"
+          },
+          {
+            "coords": [-0.0772551, 34.765194],
+            "title": "Flames of Hope Academy"
+          },
+          {
+            "coords": [-0.0814583, 34.7642067],
+            "title": "Mary Royal School"
+          },
+          {
+            "coords": [-0.08097, 34.76504],
+            "title": "Obunga ECDE"
+          },
+          {
+            "coords": [-0.0811754, 34.7657452],
+            "title": "Canaan ECDE"
+          },
+          {
+            "coords": [-0.0812628, 34.7655812],
+            "title": "Kamakowa SDA ECDE"
+          },
+          {
+            "coords": [-0.0796774, 34.7674453],
+            "title": "Emmaus Blessed Primary School"
+          },
+          {
+            "coords": [-0.0806433, 34.7656217],
+            "title": "Arcades Educational Centre"
+          },
+          {
+            "coords": [-0.0802234, 34.7681076],
+            "title": "Shephards Hill Baptist School"
+          },
+          {
+            "coords": [-0.0783967, 34.7693417],
+            "title": "Bridge International Academy"
+          },
+          {
+            "coords": [-0.0787289, 34.7693971],
+            "title": "Future Hope School"
+          },
+
+          {
+            "coords": [-0.0802396, 34.7680814],
+            "title": "Shephards Hill Baptist School Day Care"
+          }
+        ],
+        "hospitals": [
+          {
+            "coords": [-0.0449871, 34.7709567],
+            "title": "St. Monica Hospital"
+          },
+          {
+            "coords": [-0.0762983, 34.7240517],
+            "title": "St Jairus"
+          }
+        ]
+      },
+      "kolwa east": {
+        "schools": [],
+        "hospitals": []
       }
     },
-    "nairobi": {
-      "westlands": {
-        "karura": {
-          "schools": [
-            {
-              "coords": [-1.2390, 36.8233],
-              "title": "Karura Forest Academy"
-            }
-          ],
-          "hospitals": [
-            {
-              "coords": [-1.2400, 36.8220],
-              "title": "Karura Health Clinic"
-            }
-          ]
-        }
+    "kisumu central": {}
+  },
+  "nairobi": {
+    "westlands": {
+      "karura": {
+        "schools": [
+          {
+            "coords": [-1.239, 36.8233],
+            "title": "Karura Forest Academy"
+          }
+        ],
+        "hospitals": [
+          {
+            "coords": [-1.24, 36.822],
+            "title": "Karura Health Clinic"
+          }
+        ]
       }
     }
   }
-  
+}
