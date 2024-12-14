@@ -20,7 +20,7 @@
             "title": "Mary Royal School"
           },
           {
-            "coords": [-0.0809700, 34.7650400],
+            "coords": [-0.08097, 34.76504],
             "title": "Obunga ECDE"
           },
           {
@@ -51,15 +51,11 @@
             "coords": [-0.0787289, 34.7693971],
             "title": "Future Hope School"
           },
-          {
-            "coords": [-0.0716233, 34.7879633],
-            "title": "Pitapata Little Academy"
-          },
+
           {
             "coords": [-0.0802396, 34.7680814],
             "title": "Shephards Hill Baptist School Day Care"
           }
-          
         ],
         "hospitals": [
           {
