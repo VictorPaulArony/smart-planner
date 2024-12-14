@@ -130,8 +130,11 @@
         ],
         "hospitals": [
           {
-            "coords": [-0.0930, 34.7635],
-            "title": "Kanyakwar Health Center"
+            "coords": [-0.0449871, 34.7709567],
+            "title": "St. Monica Hospital"
+          },
+          {
+
           }
         ]
       }
