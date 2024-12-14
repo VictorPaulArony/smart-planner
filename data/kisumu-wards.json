@@ -1,0 +1,190 @@
+{
+  "county": {
+    "county_name": "Kisumu",
+    "county_code": "042",
+    "sub_counties": [
+      {
+        "sub_county_name": "Seme",
+        "sub_county_code": "042007",
+        "wards": [
+          {
+            "ward_name": "West Seme",
+            "ward_code": "042007001"
+          },
+          {
+            "ward_name": "Central Seme",
+            "ward_code": "042007002"
+          },
+          {
+            "ward_name": "East Seme",
+            "ward_code": "042007003"
+          },
+          {
+            "ward_name": "North Seme",
+            "ward_code": "042007004"
+          }
+        ]
+      },
+      {
+        "sub_county_name": "Kisumu West",
+        "sub_county_code": "042002",
+        "wards": [
+          {
+            "ward_name": "South West Kisumu",
+            "ward_code": "042002001"
+          },
+          {
+            "ward_name": "Central Kisumu",
+            "ward_code": "042002002"
+          },
+          {
+            "ward_name": "Kisumu North",
+            "ward_code": "042002003"
+          },
+          {
+            "ward_name": "North West Kisumu",
+            "ward_code": "042002004"
+          },
+          {
+            "ward_name": "West Kisumu",
+            "ward_code": "042002005"
+          }
+        ]
+      },
+      {
+        "sub_county_name": "Muhoroni",
+        "sub_county_code": "042004",
+        "wards": [
+          {
+            "ward_name": "Miwani",
+            "ward_code": "042004001"
+          },
+          {
+            "ward_name": "Ombeyi",
+            "ward_code": "042004002"
+          },
+          {
+            "ward_name": "Masogo Nyangoma",
+            "ward_code": "042004003"
+          },
+          {
+            "ward_name": "Chemelil",
+            "ward_code": "042004004"
+          },
+          {
+            "ward_name": "Muhorono/Koru",
+            "ward_code": "042004005"
+          }
+        ]
+      },
+      {
+        "sub_county_name": "Nyakach",
+        "sub_county_code": "042006",
+        "wards": [
+          {
+            "ward_name": "South West Nyakach",
+            "ward_code": "042006001"
+          },
+          {
+            "ward_name": "North Nyakach",
+            "ward_code": "042006002"
+          },
+          {
+            "ward_name": "Central Nyakach",
+            "ward_code": "042006003"
+          },
+          {
+            "ward_name": "West Nyakach",
+            "ward_code": "042006004"
+          },
+          {
+            "ward_name": "South East Nyakach",
+            "ward_code": "042006005"
+          }
+        ]
+      },
+      {
+        "sub_county_name": "Nyando",
+        "sub_county_code": "042005",
+        "wards": [
+          {
+            "ward_name": "East Kano/Wawidhi",
+            "ward_code": "042005001"
+          },
+          {
+            "ward_name": "Awasi/Onjiko",
+            "ward_code": "042005002"
+          },
+          {
+            "ward_name": "Ahero",
+            "ward_code": "042005003"
+          },
+          {
+            "ward_name": "Kabonyo/Kanyagwal",
+            "ward_code": "042005004"
+          },
+          {
+            "ward_name": "Kobura",
+            "ward_code": "042005005"
+          }
+        ]
+      },
+      {
+        "sub_county_name": "Kisumu East",
+        "sub_county_code": "042001",
+        "wards": [
+          {
+            "ward_name": "Kolwa East",
+            "ward_code": "042001001"
+          },
+          {
+            "ward_name": "Manyatta B",
+            "ward_code": "042001002"
+          },
+          {
+            "ward_name": "Nyalenda A",
+            "ward_code": "042001003"
+          },
+          {
+            "ward_name": "Kajulu",
+            "ward_code": "042001004"
+          },
+          {
+            "ward_name": "Kolwa Central",
+            "ward_code": "042001005"
+          }
+        ]
+      },
+      {
+        "sub_county_name": "Kisumu Central",
+        "sub_county_code": "042003",
+        "wards": [
+          {
+            "ward_name": "Railways",
+            "ward_code": "042003001"
+          },
+          {
+            "ward_name": "Migosi",
+            "ward_code": "042003002"
+          },
+          {
+            "ward_name": "Kaloleni/Shaurimoyo",
+            "ward_code": "042003003"
+          },
+          {
+            "ward_name": "Market Milimani",
+            "ward_code": "042003004"
+          },
+          {
+            "ward_name": "Kondele",
+            "ward_code": "042003005"
+          },
+          {
+            "ward_name": "Nyalenda B",
+            "ward_code": "042003006"
+          }
+        ]
+      }
+    ]
+  }
+}
