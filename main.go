@@ -1,50 +1,58 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
-	"os"
 
 	"smart-planner/handlers"
-	mapping "smart-planner/mapping"
 )
+
+const OVERPASSURL = "https://overpass-api.de/api/interpreter"
 
 // function main of the smart planners system
 func main() {
-	// The output of the map data.
-	filename := "kisumu-data.xml"
-	osmData, err := mapping.ParseOSMFile(filename)
+	// Overpass API query
+	query := `
+    [out:json];
+    area[name="Kisumu"]->.searchArea;
+    (
+      relation["boundary"="administrative"](area.searchArea);
+      way["boundary"="administrative"](area.searchArea);
+    );
+    out body;
+    >;
+    out skel qt;
+    `
+
+	// Send request
+	resp, err := http.Post(OVERPASSURL, "text/plain", bytes.NewBufferString(query))
 	if err != nil {
-		log.Println("Error parsing osm file", err)
-		return
+		log.Fatalf("Error making request to Overpass API: %v", err)
+	}
+	defer resp.Body.Close()
+
+	// Read response
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatalf("Error reading response: %v", err)
 	}
 
-	// Convert to GeoJSON
-	geoJSON := mapping.ConvertOSMToGeoJSON(osmData)
-
-	// Save GeoJSON to file
-	file, err := os.Create("kisumu-data.geojson")
+	// Parse JSON response
+	var data interface{}
+	err = json.Unmarshal(body, &data)
 	if err != nil {
-		fmt.Println("Error creating GeoJSON file:", err)
-		return
-	}
-	defer file.Close()
-
-	encoder := json.NewEncoder(file)
-	encoder.SetIndent("", "  ")
-	err = encoder.Encode(geoJSON)
-	if err != nil {
-		fmt.Println("Error writing GeoJSON file:", err)
-		return
+		log.Fatalf("Error parsing JSON response: %v", err)
 	}
 
-	fmt.Println("GeoJSON data saved to kisumu-data.geojson")
+	// Print response or process further
+	log.Printf("Overpass response: %s", body)
 
-	//This handler serves the data from kisumu.
+	// This handler serves the data from kisumu.
 	http.HandleFunc("/map/kisumu-map", handlers.RegionHandler)
-
 
 	// Start the server
 	port := ":8080"
