@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kisumu GeoJSON</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisumu GeoJSON with Static Image</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-    <div id="map" style="width: 100%; height: 600px;"></div>
-    <script>
-        // Initialize the map
-        var map = L.map('map').setView([-0.09, 34.75], 12);
+    <div id="map" style="width: 70%; height: 600px;"></div>
 
-        // Add a basemap
+    <script>
+        // Initialize the map with a specific center and zoom level
+        var map = L.map('map').setView([-0.0917, 34.7680], 13); // Adjust to your region's coordinates
+
+        // Static image overlay (replace with the image you want to use)
+        var imageUrl = 'path/to/static_map_image.jpg';  // Path to your static map image
+        var imageBounds = [[-0.2, 34.5], [0.2, 35.0]]; // Define the bounds of your image (latitude, longitude)
+        L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+        // Add OpenStreetMap tiles as a secondary base layer (can be removed if you want the map fully static)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Load and add the GeoJSON data
-        fetch('kisumu-data.geojson')
-    .then(response => response.json())
-    .then(data => {
-        // Add the GeoJSON layer to the map
+        // Load and add the GeoJSON data (subcounty boundaries)
+        fetch('geojson/kisumu-data.json')
+        .then(response => response.json())
+        .then(data => {
+           // Use the GeoJSON data
         L.geoJSON(data, {
-            onEachFeature: function (feature, layer) {
-                // Popup for each feature showing its properties
-                let popupContent = "<strong>Feature ID:</strong> " + feature.properties.id;
-                for (const [key, value] of Object.entries(feature.properties)) {
-                    popupContent += `<br><strong>${key}:</strong> ${value}`;
-                }
-                layer.bindPopup(popupContent);
-            },
             style: function (feature) {
-                // Optional: Style features dynamically based on properties
                 return {
-                    color: "#3388ff",
-                    weight: 2,
+                    color: "yellow", // Set boundary color
+                    weight: 2,  // Set boundary thickness
+                    opacity: 1
                 };
-            },
+            }
         }).addTo(map);
     })
-    .catch(error => {
-        console.error("Error loading GeoJSON data:", error);
-    });
+        .catch(error => {
+            console.error("Error loading GeoJSON data:", error);
+        });
     </script>
 </body>
 </html>
