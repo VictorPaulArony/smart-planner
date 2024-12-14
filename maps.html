@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Map with Dynamic Filters</title>
+    <title>Interactive Map with Dynamic Filters and Heatmap</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
       body {
@@ -34,6 +34,9 @@
       }
       .search-button:hover {
         background-color: #0056b3;
+      }
+      #heatmap-toggle {
+        margin-left: 10px;
       }
     </style>
   </head>
@@ -70,12 +73,9 @@
           </select>
         </div>
         <div class="filter-group">
-          <button class="search-button" id="search-button" disabled>
-            Search
-          </button>
-        </div>
-        <div>
-          <button class="search-button" id="search-button" disabled>Suggestions</button>
+          <button class="search-button" id="search-button" disabled>Search</button>
+          <input type="checkbox" id="heatmap-toggle" name="heatmap-toggle">
+          <label for="heatmap-toggle">Show Density Heatmap</label>
         </div>
       </div>
     </section>
@@ -83,6 +83,7 @@
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script>
       // Initialize the map
       const map = L.map("map").setView([-0.0917, 34.763], 10); // Center on Kisumu
@@ -111,9 +112,70 @@
       const wardSelect = document.getElementById("ward-search");
       const resourceSelect = document.getElementById("resource-search");
       const searchButton = document.getElementById("search-button");
+      const heatmapToggle = document.getElementById("heatmap-toggle");
 
-      // Event listener for county selection
-      countySelect.addEventListener("change", () => {
+      // Heatmap layer variable
+      let heatmapLayer = null;
+
+      // Function to generate heatmap data
+      function generateHeatmapData(county, subcounty, ward, resource) {
+        if (!data[county] || !data[county][subcounty] || !data[county][subcounty][ward]) {
+          return [];
+        }
+
+        const locations = data[county][subcounty][ward][resource] || [];
+        
+        // Transform locations into heatmap data points
+        return locations.map(location => [
+          location.coords[0],  // latitude
+          location.coords[1],  // longitude
+          location.density || 1000  // density or default value
+        ]);
+      }
+
+      // Function to create or update heatmap
+      function updateHeatmap(county, subcounty, ward, resource) {
+        // Remove existing heatmap if it exists
+        if (heatmapLayer) {
+          map.removeLayer(heatmapLayer);
+        }
+
+        // Generate heatmap data
+        const heatmapData = generateHeatmapData(county, subcounty, ward, resource);
+
+        // Create new heatmap layer if data exists and heatmap is toggled on
+        if (heatmapData.length > 0 && heatmapToggle.checked) {
+          heatmapLayer = L.heatLayer(heatmapData, {
+            radius: 25,
+            blur: 15,
+            maxZoom: 17,
+            gradient: {
+              0.4: 'blue',    // Low density
+              0.65: 'lime',   // Medium density
+              1: 'red'        // High density
+            }
+          }).addTo(map);
+        }
+      }
+
+      // Event listener for heatmap toggle
+      heatmapToggle.addEventListener('change', () => {
+        const county = countySelect.value;
+        const subcounty = subcountySelect.value;
+        const ward = wardSelect.value;
+        const resource = resourceSelect.value;
+
+        if (county && subcounty && ward && resource) {
+          updateHeatmap(county, subcounty, ward, resource);
+        }
+      });
+
+      // Rest of the existing event listeners and code remains the same...
+      // (County, Subcounty, Ward selection logic)
+
+      // Modify search button event listener to include heatmap
+            // Event listener for county selection
+            countySelect.addEventListener("change", () => {
         console.log("Selected county:", countySelect.value);
 
         subcountySelect.innerHTML =
@@ -188,8 +250,6 @@
           searchButton.disabled = true;
         }
       });
-
-      // Search functionality
       searchButton.addEventListener("click", () => {
         const county = countySelect.value;
         const subcounty = subcountySelect.value;
@@ -220,8 +280,14 @@
           locations.forEach((location) => {
             L.marker(location.coords)
               .addTo(map)
-              .bindPopup(`<strong>${location.title}</strong>`);
+              .bindPopup(`
+                <strong>${location.title}</strong><br>
+                Population Density: ${location.density} per sq. km
+              `);
           });
+
+          // Update heatmap
+          updateHeatmap(county, subcounty, ward, resource);
 
           // Zoom to the first location
           if (locations.length > 0) {
