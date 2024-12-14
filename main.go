@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 
+	"smart-planner/handlers"
 	mapping "smart-planner/mapping"
 )
 
@@ -41,8 +42,9 @@ func main() {
 
 	fmt.Println("GeoJSON data saved to kisumu-data.geojson")
 
-	// Serve static files (HTML, CSS, JS, GeoJSON)
-	http.Handle("/map", http.FileServer(http.Dir("./static")))
+	//This handler serves the data from kisumu.
+	http.HandleFunc("/map/kisumu-map", handlers.RegionHandler)
+
 
 	// Start the server
 	port := ":8080"
