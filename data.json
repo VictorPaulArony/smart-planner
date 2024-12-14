@@ -1,0 +1,43 @@
+{
+    "kisumu": {
+      "kisumu east": {
+        "kanyakwar": {
+          "schools": [
+            {
+              "coords": [-0.0920, 34.7640],
+              "title": "Kanyakwar Primary School"
+            },
+            {
+              "coords": [-0.0915, 34.7655],
+              "title": "Kanyakwar High School"
+            }
+          ],
+          "hospitals": [
+            {
+              "coords": [-0.0930, 34.7635],
+              "title": "Kanyakwar Health Center"
+            }
+          ]
+        }
+      }
+    },
+    "nairobi": {
+      "westlands": {
+        "karura": {
+          "schools": [
+            {
+              "coords": [-1.2390, 36.8233],
+              "title": "Karura Forest Academy"
+            }
+          ],
+          "hospitals": [
+            {
+              "coords": [-1.2400, 36.8220],
+              "title": "Karura Health Clinic"
+            }
+          ]
+        }
+      }
+    }
+  }
+  
