@@ -9,11 +9,14 @@ import (
 )
 
 // function main of the smart planners system
-func main(){
+func main() {
 	http.HandleFunc("/", handlers.IndexHandler)
 	http.HandleFunc("/features", handlers.FeaturesHandler)
 	http.HandleFunc("/contact", handlers.ContactHandler)
 	http.HandleFunc("/case", handlers.CaseHandler)
+	http.HandleFunc("/maps", handlers.MapsHandler)
+
+	// seting the environment for easy deployment
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "3000" // Default fallback for local testing
