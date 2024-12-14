@@ -12,7 +12,7 @@ var templates = template.Must(template.New("").ParseFiles(
 	"templates/case.html",
 	"templates/contact.html",
 	"templates/features.html",
-	"template/maps.html",
+	"templates/maps.html",
 ))
 
 // Handler serves requests for Vercel
