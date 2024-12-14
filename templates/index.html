@@ -1,11 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Cities Data Platform</title>
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/index.css">
+
+    </style>
 </head>
+
 <body>
     
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Smart Planner</div>
+            <div class="nav-links">
+                <a href="/features">Features</a>
+                <a href="/maps">Mapper</a>
+                <a href="/case">Case Studies</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Smart Cities</h1>
+            <p>Our platform provides real-time data insights to help planners optimize resources like schools,
+                hospitals, and water supply based on population needs.</p>
+                <a href="/maps">  <button class="cta-button">Request Demo</button></a>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="mission-text">We're on a mission to revolutionize urban planning through data-driven
+                        insights and smart resource allocation. Our platform empowers city planners to make informed
+                        decisions that enhance citizens' quality of life.</p>
+                    <div class="vision-points">
+                        <div class="vision-item">
+                            <svg class="vision-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5">
+                                </path>
+                            </svg>
+                            <p>Data-Driven Urban Planning</p>
+                        </div>
+                        <div class="vision-item">
+                            <svg class="vision-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor"
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                </path>
+                            </svg>
+                            <p>Sustainable Development</p>
+                        </div>
+                        <div class="vision-item">
+                            <svg class="vision-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor"
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z">
+                                </path>
+                            </svg>
+                            <p>Community-Centric Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Real-time Analytics</h3>
+                <p>Monitor city metrics in real-time with advanced analytics and predictive modeling.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Resource Optimization</h3>
+                <p>Optimize resource allocation based on population density and usage patterns.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Infrastructure</h3>
+                <p>Connect and manage smart infrastructure through our integrated platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <h2>Resource Distribution Analysis</h2>
+        <div class="comparison-grid">
+            <div class="metric-card">
+                <h3>Population per School</h3>
+                <div class="metric-value">1:2500</div>
+                <p>Current Coverage: 85%</p>
+                <ul class="resource-stats">
+                    <li>Primary Schools: 245</li>
+                    <li>Secondary Schools: 125</li>
+                    <li>Average Distance: 1.2km</li>
+                    <li>Student Capacity: 98%</li>
+                </ul>
+            </div>
+            <div class="metric-card">
+                <h3>Healthcare Coverage</h3>
+                <div class="metric-value">1:5000</div>
+                <p>Current Coverage: 78%</p>
+                <ul class="resource-stats">
+                    <li>Hospitals: 45</li>
+                    <li>Clinics: 180</li>
+                    <li>Emergency Units: 25</li>
+                    <li>Bed Capacity: 92%</li>
+                </ul>
+            </div>
+            <div class="metric-card">
+                <h3>Water Supply Network</h3>
+                <div class="metric-value">95%</div>
+                <p>Coverage Rate</p>
+                <ul class="resource-stats">
+                    <li>Treatment Plants: 12</li>
+                    <li>Supply Hours: 22/day</li>
+                    <li>Quality Index: 98%</li>
+                    <li>Network Length: 2500km</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <h2>Explore City Resources</h2>
+        <div class="filters-grid">
+            <div class="filter-group">
+                <label for="county-search">Select County</label>
+                <select id="county-search" class="select2-search">
+                    <option value="">Select a county...</option>
+                    <option value="county1">Nairobi County</option>
+                    <option value="county2">Mombasa County</option>
+                    <option value="county3">Kisumu County</option>
+                    <option value="county4">Nakuru County</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="subcounty-search">Select Sub-County</label>
+                <select id="subcounty-search" class="select2-search">
+                    <option value="">Select a sub-county...</option>
+                    <option value="subcounty1">kisumu west</option>
+                    <option value="subcounty2">Nyando</option>
+                    <option value="subcounty3">kisumu East</option>
+                    <option value="subcounty4">Kisumu  North</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="ward-search">Select Ward</label>
+                <select id="ward-search" class="select2-search">
+                    <option value="">Select a ward...</option>
+                    <option value="ward1">Mamboleo</option>
+                    <option value="ward2">Kanyakwar</option>
+                    <option value="ward3">Nyalenda</option>
+                    <option value="ward4">Obunga</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="resource-search">Search Resources</label>
+                <input type="text" id="resource-search" placeholder="Search for resources..." class="search-input">
+            </div>
+            <div class="filter-group">
+                <button class="search-button">
+                    Search Amenities
+                </button>
+            </div>
+        </div>
+    </section>
+  
+
+    <section class="data-section">
+        <div class="charts-container">
+            <div class="chart-card">
+                <canvas id="populationChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <canvas id="resourceChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="container">
+            <h2>Real Impact, Real Results</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">85%</div>
+                    <p>Improved Resource Allocation</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">2.5M+</div>
+                    <p>Citizens Served</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">30%</div>
+                    <p>Cost Reduction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Urban Planners Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <svg class="quote-icon" viewBox="0 0 24 24" width="32" height="32">
+                            <path fill="currentColor" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                        </svg>
+                        <p>"This platform has transformed how we approach urban planning. The real-time insights have
+                            helped us optimize resource allocation significantly."</p>
+                        <div class="testimonial-author">
+                            <strong>victor Paul</strong>
+                            <span>Developer, zone01Kisumu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <svg class="quote-icon" viewBox="0 0 24 24" width="32" height="32">
+                            <path fill="currentColor" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                        </svg>
+                        <p>"The data-driven approach has helped us make better decisions for our growing population.
+                            It's an essential tool for modern city planning."</p>
+                        <div class="testimonial-author">
+                            <strong>Shadrack Okoth</strong>
+                            <span>Chief Planning Officer, Smart Region Initiative</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <svg class="quote-icon" viewBox="0 0 24 24" width="32" height="32">
+                            <path fill="currentColor" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                        </svg>
+                        <p>"The platform's analytics have revolutionized our resource allocation strategy. We've seen a
+                            40% improvement in service delivery efficiency."</p>
+                        <div class="testimonial-author">
+                            <strong>Joab Owala</strong>
+                            <span>Smart City Consultant, Urban Solutions Inc</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <svg class="quote-icon" viewBox="0 0 24 24" width="32" height="32">
+                            <path fill="currentColor" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                        </svg>
+                        <p>"Implementation was seamless and the results were immediate. Our city's infrastructure
+                            planning has never been more efficient."</p>
+                        <div class="testimonial-author">
+                            <strong>Gathanga Elijah</strong>
+                            <span>Infrastructure Manager, Smart City Council</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">Smart Planner</div>
+                    <p class="footer-description">Empowering cities with data-driven insights for smarter urban planning
+                        and resource allocation.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/victorpaularony" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/victorpaularony" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/case">Case Studies</a></li>
+                        <li><a href="/">Pricing</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">Documentation</a></li>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">API</a></li>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">Support</a></li>
+                        <li><a href="https://github.com/VictorPaulArony/smart-planner">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            <a href="mailto:victorpaularony@gmail.com">contact@smartPlanner</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                            zone01Kisumu, Smart planner
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SmartPlanner. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="https://github.com/VictorPaulArony/smart-planner">Privacy Policy</a>
+                    <a href="https://github.com/VictorPaulArony/smart-planner">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

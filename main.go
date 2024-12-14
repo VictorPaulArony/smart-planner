@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"smart-planner/handlers"
 	"smart-planner/mapping"
@@ -13,6 +14,11 @@ const OVERPASSURL = "https://overpass-api.de/api/interpreter"
 
 // function main of the smart planners system
 func main() {
+	http.HandleFunc("/", handlers.IndexHandler)
+	http.HandleFunc("/features", handlers.FeaturesHandler)
+	http.HandleFunc("/contact", handlers.ContactHandler)
+	http.HandleFunc("/case", handlers.CaseHandler)
+	http.HandleFunc("/maps", handlers.MapsHandler)
 	// Overpass API query
 	query := `
     [out:json];
@@ -32,8 +38,6 @@ func main() {
 	}
 	fmt.Println(">>>> ", data)
 
-	
-
 	// Serve the HTML template for the map
 	http.Handle("/geojson/", http.StripPrefix("/geojson", http.FileServer(http.Dir("."))))
 	// server the HML files from the templates folder
@@ -42,10 +46,12 @@ func main() {
 	// This handler serves the data from kisumu.
 	http.HandleFunc("/kisumu-map", handlers.RegionHandler)
 
-	// Start the server
-	port := ":8080"
-	fmt.Printf("Server running at http://localhost%s\n", port)
-	if err := http.ListenAndServe(port, nil); err != nil {
-		fmt.Println("Error starting server:", err)
+	// seting the environment for easy deployment
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000" // Default fallback for local testing
 	}
+	// localhost for the system testing
+	log.Println("http://localhost:3000")
+	http.ListenAndServe(":"+port, nil)
 }
