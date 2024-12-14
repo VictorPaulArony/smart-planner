@@ -1,43 +1,158 @@
 {
-    "kisumu": {
-      "kisumu east": {
-        "kanyakwar": {
-          "schools": [
-            {
-              "coords": [-0.0920, 34.7640],
-              "title": "Kanyakwar Primary School"
-            },
-            {
-              "coords": [-0.0915, 34.7655],
-              "title": "Kanyakwar High School"
-            }
-          ],
-          "hospitals": [
-            {
-              "coords": [-0.0930, 34.7635],
-              "title": "Kanyakwar Health Center"
-            }
-          ]
-        }
+  "kisumu": {
+    "kisumu east": {
+      "kanyakwar": {
+        "schools": [
+          {
+            "coords": [-0.0920, 34.7640],
+            "title": "Kanyakwar Primary School"
+          },
+          {
+            "coords": [-0.0915, 34.7655],
+            "title": "Kanyakwar High School"
+          },
+          {
+            "coords": [-0.0778750, 34.7650350],
+            "title": "Akili Academy"
+          },
+          {
+            "coords": [-0.0741963, 34.7624522],
+            "title": "Kudho Secondary School"
+          },
+          {
+            "coords": [-0.0772551, 34.7651940],
+            "title": "Flames of Hope Academy"
+          },
+          {
+            "coords": [-0.0814583, 34.7642067],
+            "title": "Mary Royal School"
+          },
+          {
+            "coords": [-0.0809700, 34.7650400],
+            "title": "Obunga ECDE"
+          },
+          {
+            "coords": [-0.0811754, 34.7657452],
+            "title": "Canaan ECDE"
+          },
+          {
+            "coords": [-0.0812628, 34.7655812],
+            "title": "Kamakowa SDA ECDE"
+          },
+          {
+            "coords": [-0.0796774, 34.7674453],
+            "title": "Emmaus Blessed Primary School"
+          },
+          {
+            "coords": [-0.0806433, 34.7656217],
+            "title": "Arcades Educational Centre"
+          },
+          {
+            "coords": [-0.0802234, 34.7681076],
+            "title": "Shephards Hill Baptist School"
+          },
+          {
+            "coords": [-0.0783967, 34.7693417],
+            "title": "Bridge International Academy"
+          },
+          {
+            "coords": [-0.0787289, 34.7693971],
+            "title": "Future Hope School"
+          },
+          {
+            "coords": [-0.0716233, 34.7879633],
+            "title": "Pitapata Little Academy"
+          },
+          {
+            "coords": [-0.0802396, 34.7680814],
+            "title": "Shephards Hill Baptist School Day Care"
+          },
+          {
+            "coords": [-0.0765217, 34.7714250],
+            "title": "Hajushine"
+          },
+          {
+            "coords": [-0.0812747, 34.7715699],
+            "title": "St. Martha School"
+          },
+          {
+            "coords": [-0.0780133, 34.7854100],
+            "title": "GRAPHELI JUNIOR"
+          },
+          {
+            "coords": [-0.0821191, 34.7847992],
+            "title": "Jomsi Day Care"
+          },
+          {
+            "coords": [-0.0822638, 34.7824029],
+            "title": "Wisdom Bells Academy"
+          },
+          {
+            "coords": [-0.0844338, 34.7897651],
+            "title": "Urzuri Suburbs Academy"
+          },
+          {
+            "coords": [-0.0782133, 34.7861200],
+            "title": "Kisumu Rehema Primary School"
+          },
+          {
+            "coords": [-0.0874895, 34.7870711],
+            "title": "Simon Newberry"
+          },
+          {
+            "coords": [-0.0859850, 34.7845033],
+            "title": "Wonderland Premier Academy"
+          },
+          {
+            "coords": [-0.0843518, 34.7868604],
+            "title": "Living Stream Nursery and Primary"
+          },
+          {
+            "coords": [-0.0857217, 34.7818615],
+            "title": "St. Lukes ACK Manyatta ECDE & PRIMARY"
+          },
+          {
+            "coords": [-0.0875767, 34.7816633],
+            "title": "The Delphins Academy"
+          },
+          {
+            "coords": [-0.0859307, 34.7792871],
+            "title": "Rainbow School"
+          },
+          {
+            "coords": [-0.0866174, 34.7782093],
+            "title": "Brightons Becca Community Learning"
+          },
+          {
+            "coords": [-0.0828909, 34.7747945],
+            "title": "Trinity Centre Computer Training"
+          }
+        ],
+        "hospitals": [
+          {
+            "coords": [-0.0930, 34.7635],
+            "title": "Kanyakwar Health Center"
+          }
+        ]
       }
-    },
-    "nairobi": {
-      "westlands": {
-        "karura": {
-          "schools": [
-            {
-              "coords": [-1.2390, 36.8233],
-              "title": "Karura Forest Academy"
-            }
-          ],
-          "hospitals": [
-            {
-              "coords": [-1.2400, 36.8220],
-              "title": "Karura Health Clinic"
-            }
-          ]
-        }
+    }
+  },
+  "nairobi": {
+    "westlands": {
+      "karura": {
+        "schools": [
+          {
+            "coords": [-1.2390, 36.8233],
+            "title": "Karura Forest Academy"
+          }
+        ],
+        "hospitals": [
+          {
+            "coords": [-1.2400, 36.8220],
+            "title": "Karura Health Clinic"
+          }
+        ]
       }
     }
   }
-  
+}
