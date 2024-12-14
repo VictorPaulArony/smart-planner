@@ -1,5 +1,7 @@
 {
-    "subcounty": "Kisumu",
+  "subcounty": {
+    "id": "sub_1",
+    "name": "Kisumu",
     "constituencies": [
       {
         "name": "Kisumu Central",
@@ -202,4 +204,4 @@
       }
     ]
   }
-  
+}
