@@ -8,8 +8,9 @@ import (
 )
 
 type Location struct {
-	Coords [2]float64 `json:"coords"`
-	Title  string     `json:"title"`
+	Coords  [2]float64 `json:"coords"`
+	Title   string     `json:"title"`
+	Density int        `json:"density"`
 }
 
 type Resource struct {
