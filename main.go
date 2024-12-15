@@ -18,26 +18,7 @@ func main() {
 	http.HandleFunc("/case", handlers.CaseHandler)
 	http.HandleFunc("/maps", handlers.MapsHandler)
 	http.HandleFunc("/suggestions", handlers.SuggestionsHandler)
-	// Overpass API query
-	/*
-			query := `
-		    [out:json];
-		    area[name="Kisumu"]->.searchArea;
-		    (
-		      relation["boundary"="administrative"](area.searchArea);
-		      way["boundary"="administrative"](area.searchArea);
-		    );
-		    out body;
-		    >;
-		    out skel qt;
-		    `
-			data, err := mapping.KisumuMap(OVERPASSURL, query)
-			if err != nil {
-				log.Println(err)
-				return
-			}
-			fmt.Println(">>>> ", data)
-	*/
+
 
 	// Serve the HTML template for the map
 	http.Handle("/geojson/", http.StripPrefix("/geojson", http.FileServer(http.Dir("."))))
@@ -50,7 +31,7 @@ func main() {
 	// seting the environment for easy deployment
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8000" // Default fallback for local testing
+		port = "3000" // Default fallback for local testing
 	}
 	// localhost for the system testing
 	log.Println("http://localhost:3000")
