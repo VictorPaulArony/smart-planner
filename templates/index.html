@@ -34,10 +34,13 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Empowering Smart Cities</h1>
-            <p>Our platform provides real-time data insights to help planners optimize resources like schools,
-                hospitals, and water supply based on population needs.</p>
-                <a href="/maps">  <button class="cta-button">Request Demo</button></a>
+            <div class="hero-words">
+                <h1>Empowering Smart Cities</h1>
+                <p>Our platform provides real-time data insights to help planners optimize resources like schools,
+                    hospitals, and water supply based on population needs.</p>
+                <a href="/maps"> <button class="cta-button">Request Demo</button></a>
+            </div>
+
         </div>
     </section>
 
@@ -137,59 +140,51 @@
         </div>
     </section>
 
-    <section class="filters-section">
-        <h2>Explore City Resources</h2>
-        <div class="filters-grid">
-            <div class="filter-group">
-                <label for="county-search">Select County</label>
-                <select id="county-search" class="select2-search">
-                    <option value="">Select a county...</option>
-                    <option value="county1">Nairobi County</option>
-                    <option value="county2">Mombasa County</option>
-                    <option value="county3">Kisumu County</option>
-                    <option value="county4">Nakuru County</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="subcounty-search">Select Sub-County</label>
-                <select id="subcounty-search" class="select2-search">
-                    <option value="">Select a sub-county...</option>
-                    <option value="subcounty1">kisumu west</option>
-                    <option value="subcounty2">Nyando</option>
-                    <option value="subcounty3">kisumu East</option>
-                    <option value="subcounty4">Kisumu  North</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="ward-search">Select Ward</label>
-                <select id="ward-search" class="select2-search">
-                    <option value="">Select a ward...</option>
-                    <option value="ward1">Mamboleo</option>
-                    <option value="ward2">Kanyakwar</option>
-                    <option value="ward3">Nyalenda</option>
-                    <option value="ward4">Obunga</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="resource-search">Search Resources</label>
-                <input type="text" id="resource-search" placeholder="Search for resources..." class="search-input">
-            </div>
-            <div class="filter-group">
-                <button class="search-button">
-                    Search Amenities
-                </button>
-            </div>
-        </div>
-    </section>
-  
+    <section class="features-showcase">
+        <div class="features-container">
+            <h2>Powerful Smart City Solutions</h2>
+            <p>Discover how our platform transforms urban management</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="../static/smart3.jpg" alt="Resource Distribution Analysis">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Resource Distribution Analysis</h3>
+                        <p>Advanced analytics tools to optimize resource allocation across cities and regions for maximum efficiency.</p>
+                    </div>
+                </div>
 
-    <section class="data-section">
-        <div class="charts-container">
-            <div class="chart-card">
-                <canvas id="populationChart"></canvas>
-            </div>
-            <div class="chart-card">
-                <canvas id="resourceChart"></canvas>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="../static/smart5.jpg" alt="Geographic Information System">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Geographic Information System</h3>
+                        <p>Interactive maps and location-based analytics for better urban planning and development.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="../static/smart7.jpg" alt="Real-time Analytics">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Real-time Analytics</h3>
+                        <p>Monitor and analyze city metrics in real-time to make data-driven decisions quickly.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="../static/smart4.png" alt="Community Engagement">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Community Engagement</h3>
+                        <p>Tools for citizen participation and feedback collection to build better communities together.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -52,6 +52,10 @@ This Smart Cities Location Insights Platform is a comprehensive tool designed to
    go run main.go
    ```
 ``
+## Online view 
+
+[https://smart-planner.onrender.com/](https://smart-planner.onrender.com/)
+
 
 ### User Interface Workflow
 1. Select County from dropdown
