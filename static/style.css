@@ -34,6 +34,71 @@ nav {
     align-items: center;
 }
 
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    background-image: url("../static/smart1.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+    color: rgb(2, 2, 2);
+    position: relative;
+    text-align: center;
+   
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    transition: opacity 1s ease-in-out;
+}
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.hero-words {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.hero-words h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-words p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 .logo {
     color: white;
     font-size: 1.5rem;

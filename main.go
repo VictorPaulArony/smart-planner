@@ -19,7 +19,7 @@ func main() {
 	// seting the environment for easy deployment
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "3000" // Default fallback for local testing
+		port = "8000" // Default fallback for local testing
 	}
 	// localhost for the system testing
 	log.Println("http://localhost:3000")
