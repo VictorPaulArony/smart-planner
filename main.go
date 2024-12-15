@@ -1,13 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"os"
 
 	"smart-planner/handlers"
-	"smart-planner/mapping"
 )
 
 const OVERPASSURL = "https://overpass-api.de/api/interpreter"
@@ -20,23 +18,25 @@ func main() {
 	http.HandleFunc("/case", handlers.CaseHandler)
 	http.HandleFunc("/maps", handlers.MapsHandler)
 	// Overpass API query
-	query := `
-    [out:json];
-    area[name="Kisumu"]->.searchArea;
-    (
-      relation["boundary"="administrative"](area.searchArea);
-      way["boundary"="administrative"](area.searchArea);
-    );
-    out body;
-    >;
-    out skel qt;
-    `
-	data, err := mapping.KisumuMap(OVERPASSURL, query)
-	if err != nil {
-		log.Println(err)
-		return
-	}
-	fmt.Println(">>>> ", data)
+	/*
+			query := `
+		    [out:json];
+		    area[name="Kisumu"]->.searchArea;
+		    (
+		      relation["boundary"="administrative"](area.searchArea);
+		      way["boundary"="administrative"](area.searchArea);
+		    );
+		    out body;
+		    >;
+		    out skel qt;
+		    `
+			data, err := mapping.KisumuMap(OVERPASSURL, query)
+			if err != nil {
+				log.Println(err)
+				return
+			}
+			fmt.Println(">>>> ", data)
+	*/
 
 	// Serve the HTML template for the map
 	http.Handle("/geojson/", http.StripPrefix("/geojson", http.FileServer(http.Dir("."))))
