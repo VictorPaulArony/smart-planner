@@ -17,6 +17,7 @@ func main() {
 	http.HandleFunc("/contact", handlers.ContactHandler)
 	http.HandleFunc("/case", handlers.CaseHandler)
 	http.HandleFunc("/maps", handlers.MapsHandler)
+	http.HandleFunc("/suggestions", handlers.SuggestionsHandler)
 	// Overpass API query
 	/*
 			query := `
