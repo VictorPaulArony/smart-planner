@@ -13,6 +13,7 @@ var templates = template.Must(template.New("").ParseFiles(
 	"templates/contact.html",
 	"templates/features.html",
 	"templates/maps.html",
+	"templates/suggestions.html",
 ))
 
 // Handler serves requests for Vercel
@@ -52,6 +53,11 @@ func CaseHandler(w http.ResponseWriter, r *http.Request) {
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "contact.html", nil)
 }
+
 func MapsHandler(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "maps.html", nil)
+}
+
+func SuggestionsHandler(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "suggestions.html", nil)
 }
